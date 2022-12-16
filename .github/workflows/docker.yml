@@ -1,4 +1,4 @@
-name: Build docker for all branches
+name: Build docker for all branches 
 
 on: [workflow_dispatch]
 
