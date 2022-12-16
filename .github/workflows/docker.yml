@@ -1,6 +1,9 @@
 name: Build docker for all branches 
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches:
+      - "docker-on-pr"
 
 jobs:
   build:
