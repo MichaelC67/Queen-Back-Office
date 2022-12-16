@@ -1,10 +1,6 @@
 name: Build docker for all branches
 
-on:
-  push:
-    branches-ignore:
-      - "develop"
-      - "master"
+on: [workflow_dispatch]
 
 jobs:
   build:
@@ -48,7 +44,7 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: inseefr/queen-back-office
+          name: michaelc67/queen-back-office
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: ${{steps.extract_branch.outputs.prop}}
