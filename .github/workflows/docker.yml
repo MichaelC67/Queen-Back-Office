@@ -1,4 +1,4 @@
-name: Build docker for all branches (secrets updated)
+name: Build docker for all branches ( secrets updated )
 
 on:
   push:
