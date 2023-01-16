@@ -10,7 +10,7 @@
 		<Console name="Console-Appender" target="SYSTEM_OUT">
 			<PatternLayout>
 				<pattern>
-					 [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+					 %sn %d{yyyy/MM/dd HH:mm:ss} %r [%-6p] [%t] %c{3} %C{3}.%M(%F:%L) - %m%n
 				</pattern>
 			</PatternLayout>
 		</Console>
