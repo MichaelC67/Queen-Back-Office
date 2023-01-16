@@ -1,9 +1,14 @@
-name: Build docker for all branches ( secrets updated / checkout develop branch )
+name: Build docker for a branche as a parameter
 
-on:
-  push:
-    branches:
-      - "docker-on-pr"
+on: 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to use'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
 
 jobs:
   build:
@@ -11,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: develop
+          ref: ${{ github.event.inputs.branch }}
       - name: Set up JDK 11
         uses: actions/setup-java@v1
         with:
