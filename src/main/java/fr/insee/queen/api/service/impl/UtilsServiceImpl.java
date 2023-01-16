@@ -157,7 +157,7 @@ public class UtilsServiceImpl implements UtilsService{
 	@SuppressWarnings("unchecked")
 	public boolean checkHabilitation(HttpServletRequest request, String suId, String role){
 
-		LOGGER.info("Starting check habilitation of user {} with role {} to access survey-unit {} ",request.getRemoteUser(),role,suId);
+		LOGGER.info(">>Starting check habilitation of user {} with role {} to access survey-unit {} ",request.getRemoteUser(),role,suId);
 
 		if(integrationOverride != null && integrationOverride.equals("true")) {
 			return true;
