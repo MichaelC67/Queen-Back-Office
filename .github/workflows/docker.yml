@@ -1,4 +1,4 @@
-name: Build docker for a branch logsToDebug
+name: Build docker for a branch logsToDebug identify logs 
 
 on:
   push:
